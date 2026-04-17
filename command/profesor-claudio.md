@@ -28,77 +28,67 @@ Haz las siguientes preguntas **una por una**. Espera la respuesta antes de pasar
 
 ### Pregunta 1 — Tema
 
-```
-📚 ¿Qué vas a estudiar hoy?
+Usa la herramienta `AskUserQuestion` con estas opciones:
 
-  Opciones:
-  a) Usar el plan-ai-engineer.md de este proyecto
-  b) Otro tema (dímelo)
-```
+- question: `📚 ¿Qué vas a estudiar hoy?`
+- options:
+  - `Usar el plan-ai-engineer.md de este proyecto`
+  - `Otro tema (lo especifico a continuación)`
 
-Si elige (a): carga el curriculum de `plan-ai-engineer.md` y extrae las fases.
-Si elige (b): pide que describa el tema o pegue el plan.
+Si elige la primera: carga el curriculum de `plan-ai-engineer.md` y extrae las fases.
+Si elige la segunda: pregunta con AskUserQuestion (campo de texto libre) que describa el tema o pegue el plan.
 
 ### Pregunta 2 — Nivel inicial
 
-```
-🎯 ¿Cuál es tu nivel con este tema?
+Usa la herramienta `AskUserQuestion` con estas opciones:
 
-  1) Novato absoluto   — No sé nada, necesito ejemplos completos
-  2) Principiante      — Tengo nociones básicas, me pierdo en detalles
-  3) Intermedio        — Conozco el concepto, me cuesta aplicarlo solo
-  4) Avanzado          — Lo uso, quiero profundizar o repasar huecos
-```
+- question: `🎯 ¿Cuál es tu nivel con este tema?`
+- options:
+  - `Novato absoluto — No sé nada, necesito ejemplos completos`
+  - `Principiante — Tengo nociones básicas, me pierdo en detalles`
+  - `Intermedio — Conozco el concepto, me cuesta aplicarlo solo`
+  - `Avanzado — Lo uso, quiero profundizar o repasar huecos`
 
 Guarda el nivel como ANDAMIAJE_INICIAL.
 
 ### Pregunta 3 — Tiempo disponible
 
-```
-⏱️  ¿Cuánto tiempo tienes hoy?
+Usa la herramienta `AskUserQuestion` con estas opciones:
 
-  1) 30 minutos    → 1 concepto + retrieval check
-  2) 1 hora        → 2-3 conceptos + examen parcial
-  3) 2 horas       → Fase completa + inicio de práctica
-  4) Sesión libre  → Avanzo según el criterio de salida de cada fase
-```
+- question: `⏱️ ¿Cuánto tiempo tienes hoy?`
+- options:
+  - `30 minutos → 1 concepto + retrieval check`
+  - `1 hora → 2-3 conceptos + examen parcial`
+  - `2 horas → Fase completa + inicio de práctica`
+  - `Sesión libre → Avanzo según el criterio de salida de cada fase`
 
 Guarda el tiempo como TIEMPO_SESION y úsalo para ajustar cuánto cubrir.
 
 ### Pregunta 4 — Archivos de soporte
 
-```
-📁 ¿Qué archivos quieres que genere?
+Usa la herramienta `AskUserQuestion` con estas opciones:
 
-  Puedes elegir varios (escribe los números separados por coma, o "ninguno"):
+- question: `📁 ¿Qué archivos quieres que genere? (puedes elegir varios)`
+- options:
+  - `Apuntes (notas-[tema].md) — se actualiza al final de cada concepto`
+  - `Planning (planning-[tema].md) — calendario + intervalos de repaso espaciado`
+  - `Tracker (progreso-[tema].md) — conceptos, calibración metacognitiva, proyecto`
+  - `Los tres archivos`
+  - `Ninguno — empezamos directamente`
 
-  1) Apuntes  (notas-[tema].md)
-     → Se actualiza al final de cada concepto con lo que aprendiste
-     → Formato: concepto, definición con tus palabras, ejemplo, errores cometidos
-
-  2) Planning (planning-[tema].md)
-     → Calendario de fases con fechas estimadas según tu tiempo disponible
-     → Incluye los intervalos de repaso espaciado (1, 3, 7, 14, 30 días)
-
-  3) Tracker  (progreso-[tema].md)
-     → Registro de conceptos completados / FALLADOS / pendientes de repaso
-     → Estado del proyecto semilla
-     → Calibración metacognitiva acumulada
-
-  ninguno → Empezamos directamente sin archivos
-```
+Si elige una combinación parcial o escribe a mano los que quiere, respétala.
 
 ### Pregunta 5 — Fase de inicio
 
-```
-🗺️  ¿Desde dónde empezamos?
+Usa la herramienta `AskUserQuestion` con estas opciones:
 
-  1) Desde el principio (Fase 1 — Orientación: mapa mental)
-  2) Continuar donde lo dejé (dime en qué fase/concepto estás)
-  3) Repaso espaciado (repasar conceptos de sesiones anteriores antes de avanzar)
-```
+- question: `🗺️ ¿Desde dónde empezamos?`
+- options:
+  - `Desde el principio (Fase 1 — Orientación: mapa mental)`
+  - `Continuar donde lo dejé (indicaré fase y concepto)`
+  - `Repaso espaciado — repasar conceptos anteriores antes de avanzar`
 
-Si elige (2) o (3): pide que indique la fase, concepto y conceptos FALLADOS pendientes si los hay.
+Si elige la segunda o tercera: pregunta con AskUserQuestion (texto libre) por la fase, concepto y conceptos FALLADOS pendientes si los hay.
 
 ---
 
