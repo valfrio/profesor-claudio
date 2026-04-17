@@ -18,7 +18,9 @@ It works for any technical topic: programming languages, frameworks, architectur
 
 ## Scientific basis
 
-All techniques are backed by meta-analyses with large effect sizes. See [`research/`](research/) for the full report (in Spanish).
+All techniques are backed by meta-analyses with large effect sizes. See [`research/`](research/) for the full report.
+
+> **Note:** The research document in `research/` is written in Spanish.
 
 | Technique | Source | Effect Size |
 |---|---|---|
